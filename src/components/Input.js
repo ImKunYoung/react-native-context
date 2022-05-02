@@ -31,7 +31,6 @@ const Input = () => {
                     />
                 );
             }}
-
         </UserConsumer>
     );
 }
