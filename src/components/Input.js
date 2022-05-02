@@ -1,6 +1,6 @@
-import React, {useState} from "react";
+import React, {useState, useContext} from "react";
 import styled from "styled-components/native";
-import {UserConsumer} from "../contexts/User";
+import UserContext, {UserConsumer} from "../contexts/User";
 
 const StyledInput = styled.TextInput`
   border: 1px solid #606060;
@@ -13,6 +13,8 @@ const StyledInput = styled.TextInput`
 
 const Input = () => {
     const [name, setName] = useState('');
+    const {dispatch} = useContext(UserContext);
+
     return (
         <UserConsumer>
             {({dispatch}) => {
